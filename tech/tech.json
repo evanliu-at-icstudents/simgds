@@ -1,0 +1,82 @@
+{
+	"ls": {
+		"POLY": {
+			"layer": 1,
+			"datatype": 0
+		},
+		"GND": {
+			"layer": 2,
+			"datatype": 0
+		},
+		"VDD": {
+			"layer": 3,
+			"datatype": 0
+		},
+		"DIFF": {
+			"layer": 4,
+			"datatype": 0
+		},
+		"CONTACT": {
+			"layer": 5,
+			"datatype": 0
+		},
+		"NWELL": {
+			"layer": 6,
+			"datatype": 0
+		},
+		"MET1": {
+			"layer": 7,
+			"datatype": 0
+		},
+		"A": {
+			"layer": 10,
+			"datatype": 0
+		},
+		"Z": {
+			"layer": 11,
+			"datatype": 0
+		}
+	},
+	"in": {
+		"GND": {
+			"layer": 2,
+			"datatype": 0
+		},
+		"VDD": {
+			"layer": 3,
+			"datatype": 0
+		},
+		"A": {
+			"layer": 10,
+			"datatype": 0
+		}
+	},
+	"out": {
+		"Z": {
+			"layer": 11,
+			"datatype": 0
+		}
+	},
+	"rte": {
+		"MET1": {
+			"layer": 7,
+			"datatype": 0
+		},
+		"VIA1": {
+			"layer": 8,
+			"datatype": 0
+		},
+		"MET2": {
+			"layer": 9,
+			"datatype": 0
+		},
+		"VIA2": {
+			"layer": 10,
+			"datatype": 0
+		},
+		"MET3": {
+			"layer": 11,
+			"datatype": 0
+		}
+	}
+}
