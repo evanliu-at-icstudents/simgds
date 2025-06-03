@@ -424,7 +424,7 @@ def extractMain(gds_path, tech_path, output_path):
 
     all_polygons = []
     for cell in lib.cells:
-        all_polygons.extend(cell.get_polygons())
+        all_polygons.extend(cell.get_polygons()) #type: ignore
 
     metal_nets = find_connected_metal_nets(all_polygons, met1_info)
 
