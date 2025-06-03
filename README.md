@@ -203,3 +203,7 @@ poetry run python simgds.py -m simulate mynetlist.cmos
 ```
 This will simulate output/mynetlist.cmos and print simulation results to the console.  
 ![Console output](Screenshots/output.png)   
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
