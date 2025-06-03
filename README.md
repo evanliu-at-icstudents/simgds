@@ -5,8 +5,8 @@ made for the AP Computer Science A Final Project.
 ## The Goal
 An Electronic Design Automation (EDA) tool with the following capabilities:
 - Command Line Interface (CLI)
-- Parse and extract data from a GDS layout file
-- Convert GDS -> Netlist
+- Parse and extract data from a `.gds` layout file
+- Convert `.gds` -> Netlist
 - Output netlist as a custom designed `.cmos` file
 - Simulate `.cmos` files as digital logic
 
@@ -206,5 +206,5 @@ poetry run python simgds.py -m simulate mynetlist.cmos
 This will simulate output/mynetlist.cmos and print simulation results to the console.  
 ![Console output](Screenshots/output.png)   
 ***
-## License
+### License
 This project is licensed under the [MIT License](LICENSE).
