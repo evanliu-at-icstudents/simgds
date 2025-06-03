@@ -7,10 +7,10 @@ An Electronic Design Automation (EDA) tool with the following capabilities:
 - Command Line Interface (CLI)
 - Parse and extract data from a GDS layout file
 - Convert GDS -> Netlist
-- Output netlist as a custom designed .cmos file
-- Simulate .cmos files as digital logic
+- Output netlist as a custom designed `.cmos` file
+- Simulate `.cmos` files as digital logic
 
-## About .cmos netlists
+## About `.cmos` netlists
 CMOS files are structured in this manner
 ```cmos
 PORT IN VDD
@@ -25,6 +25,7 @@ NMOS NMOS_2 B NMOS_1 Z
 ```
 
 ## Project Structure
+```
 📁simgds/  
 ├── 🐍simgds.py - Handles the CLI  
 ├── 🐍extract.py - Parses and extracts layout data to a .cmos netlist  
@@ -40,6 +41,7 @@ NMOS NMOS_2 B NMOS_1 Z
 │   └── ...  
 ├── 🧾poetry.lock - Project dependencies managed by Poetry  
 └── 🧾pyproject.toml   
+```
 
 ## Installation
 1. Ensure you have Python 3.8 or higher installed
@@ -54,7 +56,7 @@ NMOS NMOS_2 B NMOS_1 Z
    ```
    
 ## Usage
-Make sure you have .gds and .json files in the correct folders  
+Make sure you have `.gds` and `.json` files in the correct folders  
 Example files can be found in repo
 
 ### Help command
@@ -81,12 +83,12 @@ options:
 ```
 
 ### Extraction  
-**Purpose**: Convert a GDS file into a CMOS netlist  
+**Purpose**: Convert a `.gds` file into a `.cmos` netlist  
   
 Layout of inverter  
 ![Layout of inverter](Screenshots/layout.png)   
   
-Respective .json tech file  
+Respective `.json` tech file  
 ```json
 {
 	"ls": {
@@ -173,11 +175,11 @@ Respective .json tech file
 ```  
   
 **Inputs**:
-- A GDS layout file located in the layout/ directory
-- A technology description .json file located in the tech/ directory
+- A `.gds` layout file located in the layout/ directory
+- A technology description `.json` file located in the tech/ directory
 
 **Output**:
-- A CMOS netlist file saved in the output/ directory (defaults to netlist.cmos)
+- A `.cmos` netlist file saved in the output/ directory (defaults to netlist.cmos)
 
 **Example**:
 ```bash
@@ -186,13 +188,13 @@ poetry run python simgds.py -m extract example.gds tech.json -o mynetlist.cmos
 This will read layout/example.gds and tech/tech.json, and create output/mynetlist.cmos.
 
 ### Simulation
-**Purpose**: Simulate a CMOS netlist  
+**Purpose**: Simulate a `.cmos` netlist  
   
 Output of inverter netlist after extraction  
 ![CMOS output](Screenshots/netlist.png)   
   
 **Inputs**:
-- A CMOS netlist file located in the output/ directory
+- A `.cmos `netlist file located in the output/ directory
 
 **Output**:
 - Digital logic output via truth table or user input
@@ -203,7 +205,6 @@ poetry run python simgds.py -m simulate mynetlist.cmos
 ```
 This will simulate output/mynetlist.cmos and print simulation results to the console.  
 ![Console output](Screenshots/output.png)   
-
+***
 ## License
-
 This project is licensed under the [MIT License](LICENSE).
