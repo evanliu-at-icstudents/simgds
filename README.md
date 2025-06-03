@@ -40,7 +40,7 @@ An Electronic Design Automation (EDA) tool with the following capabilities:
    ```
    
 ## Usage
-Make sure you have .gds and .json files in the correct folders
+Make sure you have .gds and .json files in the correct folders  
 Example files can be found in repo
 
 ### Help command
