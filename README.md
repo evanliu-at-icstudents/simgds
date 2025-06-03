@@ -80,8 +80,98 @@ options:
                         (default: netlist.cmos)
 ```
 
-### Extraction
-**Purpose**: Convert a GDS file into a CMOS netlist
+### Extraction  
+**Purpose**: Convert a GDS file into a CMOS netlist  
+  
+Layout of inverter  
+![Layout of inverter](Screenshots/layout.png)   
+  
+Respective .json tech file  
+```json
+{
+	"ls": {
+		"POLY": {
+			"layer": 1,
+			"datatype": 0
+		},
+		"GND": {
+			"layer": 2,
+			"datatype": 0
+		},
+		"VDD": {
+			"layer": 3,
+			"datatype": 0
+		},
+		"DIFF": {
+			"layer": 4,
+			"datatype": 0
+		},
+		"CONTACT": {
+			"layer": 5,
+			"datatype": 0
+		},
+		"NWELL": {
+			"layer": 6,
+			"datatype": 0
+		},
+		"MET1": {
+			"layer": 7,
+			"datatype": 0
+		},
+		"A": {
+			"layer": 10,
+			"datatype": 0
+		},
+		"Z": {
+			"layer": 11,
+			"datatype": 0
+		}
+	},
+	"in": {
+		"GND": {
+			"layer": 2,
+			"datatype": 0
+		},
+		"VDD": {
+			"layer": 3,
+			"datatype": 0
+		},
+		"A": {
+			"layer": 10,
+			"datatype": 0
+		}
+	},
+	"out": {
+		"Z": {
+			"layer": 11,
+			"datatype": 0
+		}
+	},
+	"rte": {
+		"MET1": {
+			"layer": 7,
+			"datatype": 0
+		},
+		"VIA1": {
+			"layer": 8,
+			"datatype": 0
+		},
+		"MET2": {
+			"layer": 9,
+			"datatype": 0
+		},
+		"VIA2": {
+			"layer": 10,
+			"datatype": 0
+		},
+		"MET3": {
+			"layer": 11,
+			"datatype": 0
+		}
+	}
+}
+```  
+  
 **Inputs**:
 - A GDS layout file located in the layout/ directory
 - A technology description .json file located in the tech/ directory
@@ -96,7 +186,11 @@ poetry run python simgds.py -m extract example.gds tech.json -o mynetlist.cmos
 This will read layout/example.gds and tech/tech.json, and create output/mynetlist.cmos.
 
 ### Simulation
-**Purpose**: Simulate a CMOS netlist
+**Purpose**: Simulate a CMOS netlist  
+  
+Output of inverter netlist after extraction  
+![CMOS output](Screenshots/netlist.png)   
+  
 **Inputs**:
 - A CMOS netlist file located in the output/ directory
 
@@ -107,6 +201,5 @@ This will read layout/example.gds and tech/tech.json, and create output/mynetlis
 ```bash
 poetry run python simgds.py -m simulate mynetlist.cmos
 ```
-This will simulate output/mynetlist.cmos and print simulation results to the console.
-
-
+This will simulate output/mynetlist.cmos and print simulation results to the console.  
+![Console output](Screenshots/output.png)   
