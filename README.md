@@ -10,6 +10,20 @@ An Electronic Design Automation (EDA) tool with the following capabilities:
 - Output netlist as a custom designed .cmos file
 - Simulate .cmos files as digital logic
 
+## About .cmos netlists
+CMOS files are structured in this manner
+```cmos
+PORT IN VDD
+PORT IN GND
+PORT IN A
+PORT IN B
+PORT OUT Z
+PMOS PMOS_1 A VDD Z
+PMOS PMOS_2 B VDD Z
+NMOS NMOS_1 A GND NMOS_1
+NMOS NMOS_2 B NMOS_1 Z
+```
+
 ## Project Structure
 📁simgds/  
 ├── 🐍simgds.py - Handles the CLI  
@@ -24,7 +38,7 @@ An Electronic Design Automation (EDA) tool with the following capabilities:
 ├── 📁output/ - Stores .cmos netlist files  
 │   ├── ⚙fulladder.cmos  
 │   └── ...  
-├── 🧾poetry.lock - Project dependecies managed by Poetry  
+├── 🧾poetry.lock - Project dependencies managed by Poetry  
 └── 🧾pyproject.toml   
 
 ## Installation
