@@ -1,5 +1,5 @@
 # SimGDS
-**SimGDS** is A recreation of a fundamental part of the Layer vs. Schematic process created in Python w/ the Gdstk library  
+**SimGDS** is a recreation of a fundamental part of the Layer vs. Schematic process created in Python w/ the Gdstk library  
 made for the AP Computer Science A Final Project.
 
 ## The Goal
